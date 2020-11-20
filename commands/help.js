@@ -1,24 +1,26 @@
+const config = require('../config.json');
+
 module.exports = {
     name: 'help',
     description: 'Help Menu',
     execute(msg, args) {
         msg.channel.send({embed: {
             title: "Help Menu",
-            description: "Prefix `!`",
+            description: 'Bot commands are listed below:',
             fields: [{
-                name:"`!about`",
+                name:`${config.Prefix}about`,
                 value:"Bot's developer info"
             },
             {
-                name:"`!help`",
+                name:`${config.Prefix}help`,
                 description:"This Message"
             },
             {
-                name:"`!markisgod`",
+                name:`${config.Prefix}markisgod`,
                 description:"Mark Is God"
             },
             {
-                name:"`!ping`",
+                name:`${config.Prefix}ping`,
                 description:"Pong"
             }
             ]
